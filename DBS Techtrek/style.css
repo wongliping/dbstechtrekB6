@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, Verdana, Sans-Serif;
     background-color: #EBEBEB;
@@ -93,3 +94,17 @@ nav li a:hover {
     padding-bottom: 99999px;
     margin-bottom: -99999px;
 }
+=======
+body {
+    font-family: Arial, Verdana, Sans-Serif;
+    background-color: lightgray;
+    margin: 0; /* for it to be at the top of the page */
+}
+
+#wrapper { 
+    background-color: lightgray;
+    width: 80%;
+    margin: auto;
+    min-width: 900px;
+} 
+>>>>>>> aca525f9b222e412e760b95444553cd83606c89e
