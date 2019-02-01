@@ -88,14 +88,6 @@ nav ul li ul li {
 
 /* =============== THREE CONTENT COLUMN ===============*/
 
-#three_col {
-    overflow: hidden;
-    background-color: white;
-    margin: auto;
-    margin-top: 8px;
-    width:98%;
-}
-
 #col_1 {
     float: left;
     /*background-color: khaki;*/
@@ -105,17 +97,111 @@ nav ul li ul li {
 #col_2 {
     float: left;
     /*background-color: orange;*/
-    width: 50%;
+    width: 70%;
 }
 
-#col_3 {
+#content-div {
+	overflow: hidden;
+    background-color: white;
+    margin: auto;
+    margin-top: 8px;
+    width:98%;
+    display: flex;
+}
+
+#conv-table {
+	display: none;
+}
+
+#agg-table {
+	display: none;
+}
+
+table {
+  
+  border: 1px solid #666666;
+  width:80%;
+  border-spacing:0;
+  margin: auto;
+}
+table td,th {
+  padding:5px;
+  font-family:times new roman;
+  border-style:none;
+  text-align: center;
+}
+table caption {
+  font-family:verdana;
+  font-weight:bold;
+  font-size:1.2em;
+  padding-bottom:5px;
+}
+table tr:first-of-type {
+  background-color: #CC0000 !important;
+  color:white;
+}
+
+  /* ============== BAR CHART ================*/
+
+  *, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+   }
+  
+  body {
+    background: #999;
+  }
+  
+  h2 {
+    margin: 0 0 20px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #999;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #333;
+  }
+  
+  .container {
+    width: 500px;
+    margin: 20px;
+    background: #fff;
+    /*padding: 20px;*/
+    overflow: hidden;
     float: left;
-    /*background-color: salmon;*/
-    width: 20%;
-    clear: right;
-}
+  }
+  
+  .horizontal .progress-bar {
+    float: left;
+    height: 45px;
+    width: 100%;
+    padding: 12px 0;
+    background: #fff
+  }
+  
+  .horizontal .progress-track {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: #ebebeb;
+  }
+  
+  .horizontal .progress-fill {
+    position: relative;
+    background: #666;
+    height: 20px;
+    width: 30%;
+    color: #fff;
+    text-align: center;
+    font-family: "Lato","Verdana",sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  
+  .rounded .progress-track,
+  .rounded .progress-fill {
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  }
 
-#col_1, #col_2, #col_3 {
-    padding-bottom: 99999px;
-    margin-bottom: -99999px;
-}
+  #ER {
+      display: block ;
+  }

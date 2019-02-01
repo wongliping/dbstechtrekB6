@@ -47,23 +47,120 @@
 				</li>
 			</ul>
 		</nav>
-		<div id="three_col">
+		<div id="content-div">
 			<div id="col_1">
 				<div style="padding: 20px">
-					<h3>Welcome Back, !</h2>
+					<h3>Welcome Back, Mary Tan!</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 				</div>
 			</div>
 			<div id="col_2">
 				<div style="padding: 20px">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>
-			</div>
-			<div id="col_3">
-				<div style="padding: 20px">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<h1>Overview of your Cash and Potential Returns</h1>
+					<div class="container horizontal rounded">
+						<h2>Cash</h2>
+						<div class="progress-bar horizontal">
+						  <div class="progress-track">
+							<div class="progress-fill">
+							  <span>$10,950.66</span>
+							</div>
+						</div>
+					</div>
+					<br>
+					<h4>You can raise your potential returns with investments! </h4>
+					<p><input type="radio" name="investment" value="conservative"> Conservative</p>
+					<p><input type="radio" name="investment" value="aggressive"> Aggressive</p>
+
+					<div id="conv-table">
+						<table border="1">
+							<caption>Conservative Investments</caption>
+							<tr>
+								<th>Bond</th>
+								<th>Returns</th>
+							</tr>
+							<tr>
+								<td>Bond A</td>
+								<td>3%</td>
+							</tr>
+							<!-- <tr>
+								<td>Bond B</td>
+								<td>2%</td>
+							</tr> -->
+						</table>
+
+						<div class="container horizontal rounded">
+							<h3>Cash + Potential Return</h2>
+								<div class="progress-bar horizontal">
+								  <div class="progress-track">
+									<div class="progress-fill">
+									  <span>$11,550.66</span>
+									</div>
+								  </div>
+								</div>
+						</div>
+
+					</div>
+
+					<div id="agg-table" >
+						<table border="1">
+							<caption>Aggressive Investments</caption>
+							<tr>
+								<th>Stock</th>
+								<th>Returns</th>
+							</tr>
+							<tr>
+								<td>Stock A</td>
+								<td>7%</td>
+							</tr>
+							<!-- <tr>
+								<td>Stock B</td>
+								<td>8%</td>
+							</tr> -->
+						</table>
+
+						<div class="container horizontal rounded">
+							<h3>Cash + Potential Return</h2>
+								<div class="progress-bar horizontal">
+								  <div class="progress-track">
+									<div class="progress-fill">
+									  <span>$13,852.50</span>
+									</div>
+								  </div>
+								</div>
+						</div>
+
+					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
+
+<script type="text/javascript">
+	var invmClass = document.getElementsByName('investment');
+	var convTable = document.getElementById('conv-table');
+	var aggTable = document.getElementById('agg-table');
+	
+	for (var i = 0; i < invmClass.length; i++) {
+        invmClass[i].addEventListener("change",displayTable,false);
+    }
+
+    function displayTable() {
+    	convTable.style.display = "none";
+    	aggTable.style.display = "none";
+        for (var i=0; i < invmClass.length; i++){
+        	if (invmClass[i].checked){
+        		console.log(invmClass[i].value);
+        		if(invmClass[i].value == 'conservative'){
+        			convTable.style.display = "block";
+        		}
+        		if(invmClass[i].value == 'aggressive'){
+        			aggTable.style.display = "block";
+        		}
+        	}
+        }
+        
+    }
+</script>
