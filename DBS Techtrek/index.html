@@ -51,7 +51,34 @@
 			<div id="col_1">
 				<div style="padding: 20px">
 					<h3>Welcome Back, Mary Tan!</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div id="piechart" align="left"></div>
+
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+					<script type="text/javascript">
+					// Load google charts
+					google.charts.load('current', {'packages':['corechart']});
+					google.charts.setOnLoadCallback(drawChart);
+
+					// Draw the chart and set the chart values
+					function drawChart() {
+					  var data = google.visualization.arrayToDataTable([
+					  ['Transaction', 'Dollars'],
+					  ['Transport', 200],
+					  ['F&B', 150],
+					  ['ATM', 400],
+					  ['Monetary Transfers', 200]
+					  
+					]);
+
+					  // Optional; add a title and set the width and height of the chart
+					  var options = {'title':'Recent transactions'};
+
+					  // Display the chart inside the <div> element with id="piechart"
+					  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+					  chart.draw(data, options);
+					}
+					</script>
 
 				</div>
 			</div>
@@ -67,7 +94,7 @@
 							</div>
 						</div>
 					</div>
-					<br>
+					<br><br><br>
 					<h4>You can raise your potential returns with investments! </h4>
 					<p><input type="radio" name="investment" value="conservative"> Conservative</p>
 					<p><input type="radio" name="investment" value="aggressive"> Aggressive</p>
@@ -83,10 +110,10 @@
 								<td>Bond A</td>
 								<td>3%</td>
 							</tr>
-							<!-- <tr>
+							<tr>
 								<td>Bond B</td>
 								<td>2%</td>
-							</tr> -->
+							</tr>
 						</table>
 
 						<div class="container horizontal rounded">
@@ -95,6 +122,13 @@
 								  <div class="progress-track">
 									<div class="progress-fill">
 									  <span>$11,550.66</span>
+									</div>
+								  </div>
+								</div>
+								<div class="progress-bar horizontal">
+								  <div class="progress-track">
+									<div class="progress-fill2">
+									  <span>$13,852.50</span>
 									</div>
 								  </div>
 								</div>
@@ -113,18 +147,25 @@
 								<td>Stock A</td>
 								<td>7%</td>
 							</tr>
-							<!-- <tr>
+							<tr>
 								<td>Stock B</td>
 								<td>8%</td>
-							</tr> -->
+							</tr>
 						</table>
 
 						<div class="container horizontal rounded">
 							<h3>Cash + Potential Return</h2>
 								<div class="progress-bar horizontal">
 								  <div class="progress-track">
-									<div class="progress-fill">
+									<div class="progress-fill2">
 									  <span>$13,852.50</span>
+									</div>
+								  </div>
+								</div>
+								<div class="progress-bar horizontal">
+								  <div class="progress-track">
+									<div class="progress-fill">
+									  <span>$11,550.66</span>
 									</div>
 								  </div>
 								</div>
