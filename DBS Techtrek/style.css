@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, Verdana, Sans-Serif;
+    background-color: #EBEBEB;
+    margin: 0; /* for it to be at the top of the page */
+}
+
+#wrapper { 
+    background-color: #EBEBEB;
+    width: 80%;
+    margin: auto;
+    min-width: 900px;
+}
+
+header {
+	background-color: black;
+	height: 70px;
+}
+
+header img {
+	max-height: 70px;
+	padding-left: 20px;
+}
+
+nav {
+    background-color: white;
+    height: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+    width: 25%;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #C3C1C1;
+    padding: 10px;
+    font-size: 12px;
+}
+
+nav li a span {
+	color: black;
+	font-size: 16px;
+}
+
+nav li a:hover {
+    text-decoration: none;
+}
+
+.currentTab {
+	color: #CC0000;
+}
+
+/* =============== THREE CONTENT COLUMN ===============*/
+
+#three_col {
+    overflow: hidden;
+    background-color: white;
+    margin: auto;
+    margin-top: 8px;
+    width:98%;
+}
+
+#col_1 {
+    float: left;
+    /*background-color: khaki;*/
+    width: 30%;
+}
+
+#col_2 {
+    float: left;
+    /*background-color: orange;*/
+    width: 50%;
+}
+
+#col_3 {
+    float: left;
+    /*background-color: salmon;*/
+    width: 20%;
+    clear: right;
+}
+
+#col_1, #col_2, #col_3 {
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
+}
